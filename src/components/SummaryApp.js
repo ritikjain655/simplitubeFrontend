@@ -10,6 +10,10 @@ const SummaryApp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+     if (!url.trim()) {
+    setError("Please enter a YouTube URL");
+    return;
+  }
     setLoading(true);
     setSummary('');
     setError('');
