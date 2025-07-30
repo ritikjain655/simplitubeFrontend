@@ -6,7 +6,7 @@ import NavBar from './components/NavBar';
 import './App.css'; // Optional global styling
 import { useEffect } from 'react';
 const App = () => {
-  const [view, setView] = useState('quiz');
+  const [view, setView] = useState('summary');
 
   useEffect(() => {
     const pingBackend = () => {
@@ -36,10 +36,10 @@ const App = () => {
     <div className="main-container">
       <nav className="nav-buttons">
         <button
-          className={view === 'quiz' ? 'active' : ''}
-          onClick={() => setView('quiz')}
+          className={view === 'summary' ? 'active' : ''}
+          onClick={() => setView('summary')}
         >
-          Quiz
+          Summary
         </button>
         <button
           className={view === 'notes' ? 'active' : ''}
@@ -47,12 +47,15 @@ const App = () => {
         >
           Notes
         </button>
+
         <button
-          className={view === 'summary' ? 'active' : ''}
-          onClick={() => setView('summary')}
+          className={view === 'quiz' ? 'active' : ''}
+          onClick={() => setView('quiz')}
         >
-          Summary
+          Quiz
         </button>
+        
+        
       </nav>
 
       <div className="content-area">
