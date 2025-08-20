@@ -62,6 +62,11 @@ const App = () => {
         {view === 'quiz' && <QuizApp />}
         {view === 'notes' && <NotesApp />}
         {view === 'summary' && <SummaryApp />}
+        <p>If it is not working we might be facing one of the issues: 
+          Youtube Blocking IP address,
+          Proxies getting banned,
+          Or Some Backened Error,
+          In Such cases please watch the working demo on the top right corner.</p>
       </div>
       
     </div>
